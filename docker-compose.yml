@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  server:
+    image: bertrandmc/express-typescript-seed
+    ports:
+      - "3000:3000"
