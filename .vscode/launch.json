@@ -15,7 +15,6 @@
       "protocol": "inspector",
       "restart": true,
       "skipFiles": ["<node_internals>/**", "node_modules/**"]
-      // "outFiles": ["${workspaceFolder}/dist/**/**.js"]
     }
   ]
 }
