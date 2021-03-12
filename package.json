@@ -3,9 +3,9 @@
     "node": ">=0.12"
   },
   "scripts": {
+    "dev": "nodemon",
     "start": "nodemon",
     "start:prod": "nodemon dist/index.js",
-    "dev": "nodemon",
     "build": "npm run build:types && npm run build:js",
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps --copy-files",
     "build:types": "tsc --emitDeclarationOnly",
