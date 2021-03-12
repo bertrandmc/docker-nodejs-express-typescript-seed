@@ -8,7 +8,7 @@ export const server = express();
 server.use(helmet());
 server.use(compression());
 
-//views
+// views
 configureViews(server);
 
 // routes

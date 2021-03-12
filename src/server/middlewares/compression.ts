@@ -1,16 +1,13 @@
-import { Request, Response } from "express";
+import { Request, Response, RequestHandler } from "express";
 import compression from "compression";
 
-function shouldCompress(req: Request, res: Response) {
-  if (req.headers["x-no-compression"]) {
+function shouldCompress(req: Request, res: Response): boolean {
+  if ("x-no-compression" in req.headers) {
     // don't compress responses with this request header
     return false;
   }
 
-  // fallback to standard filter function
   return compression.filter(req, res);
 }
 
-export default () => {
-  return compression({ filter: shouldCompress });
-};
+export default (): RequestHandler => compression({ filter: shouldCompress });

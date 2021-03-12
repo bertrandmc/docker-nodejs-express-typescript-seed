@@ -4,11 +4,9 @@ import nunjucks from "nunjucks";
 
 const VIEWS_PATH = path.join(__dirname, "..", "views");
 
-export const configureViews = (server: Express) => {
+export const configureViews = (server: Express): void => {
   nunjucks.configure(VIEWS_PATH, {
     autoescape: true,
     express: server,
   });
 };
-
-export default () => {};
