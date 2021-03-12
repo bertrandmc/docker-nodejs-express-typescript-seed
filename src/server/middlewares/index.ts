@@ -1,10 +1,3 @@
-import { Express } from "express";
-import { configureHelmet } from "./helmet";
-import { configureCompression } from "./compression";
-import { configureViews } from "./views";
-
-export const configureMiddlewares = (server: Express) => {
-  configureHelmet(server);
-  configureViews(server);
-  configureCompression(server);
-};
+export { default as helmet } from "./helmet";
+export { default as compression } from "./compression";
+export { configureViews } from "./views";

@@ -10,3 +10,5 @@ export const configureViews = (server: Express) => {
     express: server,
   });
 };
+
+export default () => {};
