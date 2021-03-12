@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
   "ext": "ts,html,scss,css",
-  "exec": "npm run build:js && node --experimental-modules ./dist/index.js"
+  "exec": "npm run build:js && node --experimental-modules `if [ $NODE_ENV = \"development\" ]; then echo \"--inspect=0.0.0.0\"; fi` ./dist/index.js"
 }

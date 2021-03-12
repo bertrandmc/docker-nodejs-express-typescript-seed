@@ -4,9 +4,10 @@
   },
   "scripts": {
     "start": "nodemon",
-    "start:prod": "node dist/index.js",
+    "start:prod": "nodemon dist/index.js",
+    "dev": "nodemon",
     "build": "npm run build:types && npm run build:js",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline --copy-files",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps --copy-files",
     "build:types": "tsc --emitDeclarationOnly",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",

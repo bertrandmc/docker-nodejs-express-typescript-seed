@@ -10,7 +10,7 @@ RUN mkdir -p /usr/src/app && \
 
 FROM base AS dependencies
 WORKDIR /usr/src/app
-COPY --chown=appuser:appuser package.json tsconfig.json  ./
+COPY --chown=appuser:appuser package.json tsconfig.json .babelrc.js nodemon.json  ./
 USER 1001
 RUN npm install
 
@@ -19,6 +19,7 @@ WORKDIR /usr/src/app
 COPY --chown=appuser:appuser ./src ./src/
 USER 1001
 RUN npm run build
+
 
 FROM build AS runner
 WORKDIR /usr/src/app
