@@ -1,5 +1,5 @@
 import express from "express";
-import { configureViews, helmet, compression } from "./middlewares";
+import { configureViews, helmet, compression, logger } from "./middlewares";
 import { configureRouter } from "./routes";
 
 export const server = express();
@@ -7,6 +7,7 @@ export const server = express();
 // middlewares
 server.use(helmet());
 server.use(compression());
+server.use(logger());
 
 // views
 configureViews(server);

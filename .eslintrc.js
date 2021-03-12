@@ -9,5 +9,5 @@ module.exports = {
   rules: {
     "no-console": ["error"],
   },
-  ignorePatterns: ["dist/", ".eslintrc.js"],
+  ignorePatterns: ["dist/", ".eslintrc.js", "jest.config.js"],
 };
